@@ -1,0 +1,66 @@
+doctype html
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html(lang="en")
+
+	head
+		include modules/head.pug
+	body
+		.md-overlay
+		header
+
+		section
+			button.md-trigger.modal-btn(data-modal="modal-1") Click here to see modal window
+
+			#modal-1.md-modal.md-affect-8.modal-body
+				.md-content
+
+					- var bredcrambs = ["кейси", "Bukovel Sunny bible"];
+					ul.bredcrambs
+						for bredcrambs__item in bredcrambs
+							li.bredcrambs__item
+								a(href="#")= bredcrambs__item
+
+					.window-content
+						.side-info
+							.side-info__item
+								h4.side-info__title клієнт:
+								.side-info__descr Буковель
+							.side-info__item
+								h4.side-info__title задача:
+								.side-info__descr profitable
+								.side-info__descr mid-season
+							.side-info__item
+								h4.side-info__title рішення:
+								.side-info__descr Bukovel Sport Weekends
+							.side-info__item
+								h4.side-info__title результат:
+								.side-info__descr +66% accommodation income
+								.side-info__descr +30% new visitors
+						.product-info
+							.img-wrp.product-info__img
+								div(style="background-image: url(img/picture-1.png)")
+							p.text 
+								|Від виробника на прилавок — основний меседж продукції власного імпорту Сільпо. Продукти іноземних виробників відібрані та перевірені фахівцями мережі і потрапляють до магазинів без посередників. Нові продукти, кулінарні тренди та ексклюзивність товару, а також потужний фотопродакшн — так ми приносимо гастрономічне розмаїття на столи українців.
+							.product-info__video
+								iframe(src="https://www.youtube.com/embed/q6dkndmz54c" frameborder="0" allowfullscreen)
+							p.text 
+								|Від виробника на прилавок — основний меседж продукції власного імпорту Сільпо. Продукти іноземних виробників відібрані та перевірені фахівцями мережі і потрапляють до магазинів без посередників. Нові продукти, кулінарні тренди та ексклюзивність товару, а також потужний фотопродакшн — так ми приносимо гастрономічне розмаїття на столи українців.
+
+						.share Поділитись:
+							ul.socials
+								li.socials__item.socials-fb
+									a(href="https://www.facebook.com/" target="_blank")
+								li.socials__item.socials-tw
+									a(href="https://twitter.com/" target="_blank")
+								li.socials__item.socials-link
+									a()
+										.popup-alert Посилання збережено в буфер обміну
+
+				.md-close
+
+		footer
+
+		include modules/scripts.pug
